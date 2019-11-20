@@ -1,5 +1,5 @@
 import React from 'react'
-import { Menu, Icon } from 'antd'
+import { Menu } from 'antd'
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { switchMenu } from '../../redux/action'
@@ -26,7 +26,7 @@ class NavLeft extends React.Component {
     })
   }
 
-  componentWillMount () {
+  componentDidMount () {
     const menuTreeNode = this.renderMenu(MenuConfig)
     this.setState({
       menuTreeNode

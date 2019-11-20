@@ -11,9 +11,9 @@ class Header extends React.Component {
     dayPictureUrl: '',
     weather: ''
   }
-  componentWillMount () {
+  componentDidMount () {
     this.setState({
-      userName: '河畔一角'
+      userName: 'man'
     })
     setInterval(() => {
       let sysTime = Util.formateDate(new Date().getTime())

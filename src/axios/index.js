@@ -8,7 +8,7 @@ export default class Axios {
       JsonP(options.url, {
         param: 'callback'
       }, (err, response) => {
-        if (response.status == 'success') {
+        if (response.status === 'success') {
           resolve(response)
         } else {
           reject(response.message)
@@ -36,7 +36,7 @@ export default class Axios {
         }
         if (response.status === '200') {
           let res = response.data;
-          if (res.code == '0'){
+          if (res.code === '0'){
             resolve(res);
           }else{
             Modal.info({
