@@ -57,7 +57,11 @@ export default class Modals extends React.Component {
               showModal2: false
             })
           }
-        }>
+        } onOk={()=>{
+          this.setState({
+            showModal2: false
+          })
+        }}>
           <p>欢迎学习xxxxxxxxxx</p>
         </Modal>
         <Modal title="React" style={{top:20}} visible={this.state.showModal3} onCancel={()=>{
