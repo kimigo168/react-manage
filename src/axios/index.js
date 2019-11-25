@@ -28,7 +28,7 @@ export default class Axios {
         url: options.url,
         method: 'get',
         baseURL: baseApi,
-        timeout: 5000,
+        timeout: 8000,
         params: (options.data && options.data.params) || ''
       }).then((response) => {
         if (options.data && options.data.isShowLoading !== false) {
@@ -46,6 +46,11 @@ export default class Axios {
           }
         } else {
           reject(response.data);
+        }
+      }).catch((err) => {
+        console.log('errr', err)
+        if (options.data && options.data.isShowLoading !== false) {
+          loading.style.display = 'none'
         }
       })
     })

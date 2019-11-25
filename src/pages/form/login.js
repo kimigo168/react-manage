@@ -7,6 +7,7 @@ class FormLogin extends React.Component {
     let userInfo = this.props.form.getFieldsValue()
     this.props.form.validateFields((err, values) => {
       if (!err) {
+        console.log('userInfo', userInfo)
         message.success(`${userInfo.userName} 恭喜你，您通过本次表单组件学习，当前密码为：${userInfo.userPwd}`)
       }
     })
@@ -57,7 +58,12 @@ class FormLogin extends React.Component {
               {
                 getFieldDecorator('userPwd', {
                   initialValue: '',
-                  rules: []
+                  rules: [
+                    {
+                      required: true,
+                      message: '密码不能为空'
+                    }
+                  ]
                 })(
                   <Input prefix={<Icon type="lock" />} type="password" placeholder="请输入密码" />
                 )
@@ -67,7 +73,8 @@ class FormLogin extends React.Component {
               {
                 getFieldDecorator('remember', {
                   valuePropName:'checked',
-                  initialValue: true
+                  initialValue: true,
+                  rules: []
                 })(
                     <Checkbox>记住密码</Checkbox>
                 )
