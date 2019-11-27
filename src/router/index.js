@@ -20,8 +20,8 @@ import FormRegister from '../pages/form/register'
 import BasicTable from '../pages/table/basicTable'
 import HighTable from '../pages/table/highTable'
 
-// import Rich from '../pages/rich/rich'
-// import City from '../pages/city/city'
+import Rich from '../pages/rich/rich'
+import City from '../pages/city/city'
 // import Order from '../pages/order/order'
 // import Common from '../pages/common/common'
 // import OrderDetail from '../pages/order/detail'
@@ -60,8 +60,8 @@ export default class ERouter extends React.Component {
                   <Route path="/form/reg" component={FormRegister} />
                   <Route path="/table/basic" component={BasicTable} />
                   <Route path="/table/high" component={HighTable} />
-                  {/* <Route path='/rich' component={Rich} /> */}
-                  {/* <Route path="/city" component={City} /> */}
+                  <Route path='/rich' component={Rich} />
+                  <Route path="/city" component={City} />
                   {/* <Route path="/order" component={Order} /> */}
                   {/* <Route path='/bikeMap' component={BikeMap} /> */}
                   {/* <Route path='/user' component={User} /> */}
