@@ -58,8 +58,8 @@ export default class Order extends React.Component {
       this.setState({
         list,
         pagination: Utils.pagination(res, (current) => {
-          _this.params.page = current;
-          _this.requestList();
+          this.params.page = current;
+          this.requestList();
         })
       })
     })
@@ -193,8 +193,23 @@ export default class Order extends React.Component {
     return (
       <div>
         <Card>
-          
+          <BaseForm formList={this.formList} filterSubmit={this.handleFilter}/>
         </Card>
+        <Card style={{marginTop: 10}}>
+          <Button type="primary" onClick={this.openOrderDetail}>订单详情</Button>
+          <Button type="primary" style={{marginLeft: 20}} onClick={this.handleCofirm}>结束订单</Button>
+        </Card>
+        <div className="content-wrap">
+          <Table bordered columns={columns} dataSource={this.state.list} pagination={this.state.pagination}
+            rowSelection={rowSelection}
+            onRow={(record, index) => {
+                return {
+                    onClick: () => {
+                        this.onRowClick(record, index);
+                    }
+                };
+            }}/>
+        </div>
       </div>
     )
   }

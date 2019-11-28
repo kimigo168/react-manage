@@ -2,7 +2,7 @@ import React from 'react'
 import { HashRouter, Route, Switch, Redirect } from 'react-router-dom'
 
 import App from '../App'
-// import Login from '../pages/login/login'
+import Login from '../pages/login/login'
 import Admin from '../pages/admin/admin'
 import Home from '../pages/home/home'
 // import NoMatch from '../pages/nomatch'
@@ -22,11 +22,11 @@ import HighTable from '../pages/table/highTable'
 
 import Rich from '../pages/rich/rich'
 import City from '../pages/city/city'
-// import Order from '../pages/order/order'
-// import Common from '../pages/common/common'
-// import OrderDetail from '../pages/order/detail'
-// import BikeMap from '../pages/map/bikeMap'
-// import User from '../pages/user/user'
+import Order from '../pages/order/order'
+import Common from '../pages/common/common'
+import OrderDetail from '../pages/order/detail'
+import BikeMap from '../pages/map/bikeMap'
+import User from '../pages/user/user'
 // import Bar from '../pages/echarts/bar/bar'
 // import Pie from '../pages/echarts/pie/pie'
 // import Line from '../pages/echarts/line/line'
@@ -38,12 +38,12 @@ export default class ERouter extends React.Component {
       <HashRouter>
         <App>
           <Switch>
-            {/* <Route path="/login" component={Login} />
+            <Route path="/login" component={Login} />
             <Route path="/common" render={() => 
               <Common>
                 <Route path="/common/order/detail/:orderId" component={OrderDetail} />
               </Common>
-            } /> */}
+            } />
             <Route path="/" render = {() =>
               <Admin>
                 <Switch>
@@ -62,9 +62,9 @@ export default class ERouter extends React.Component {
                   <Route path="/table/high" component={HighTable} />
                   <Route path='/rich' component={Rich} />
                   <Route path="/city" component={City} />
-                  {/* <Route path="/order" component={Order} /> */}
-                  {/* <Route path='/bikeMap' component={BikeMap} /> */}
-                  {/* <Route path='/user' component={User} /> */}
+                  <Route path="/order" component={Order} />
+                  <Route path='/bikeMap' component={BikeMap} />
+                  <Route path='/user' component={User} />
                   {/* <Route path="/charts/bar" component={Bar} /> */}
                   {/* <Route path="/charts/pie" component={Pie} /> */}
                   {/* <Route path="/charts/line" component={Line} /> */}
