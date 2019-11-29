@@ -5,7 +5,7 @@ import App from '../App'
 import Login from '../pages/login/login'
 import Admin from '../pages/admin/admin'
 import Home from '../pages/home/home'
-// import NoMatch from '../pages/nomatch'
+import NoMatch from '../pages/nomatch'
 import Buttons from '../pages/ui/buttons'
 import Modals from '../pages/ui/modals'
 import Loadings from '../pages/ui/loadings'
@@ -27,10 +27,10 @@ import Common from '../pages/common/common'
 import OrderDetail from '../pages/order/detail'
 import BikeMap from '../pages/map/bikeMap'
 import User from '../pages/user/user'
-// import Bar from '../pages/echarts/bar/bar'
-// import Pie from '../pages/echarts/pie/pie'
-// import Line from '../pages/echarts/line/line'
-// import Permission from '../pages/permission/permission'
+import Bar from '../pages/echarts/bar/bar'
+import Pie from '../pages/echarts/pie/pie'
+import Line from '../pages/echarts/line/line'
+import Permission from '../pages/permission/permission'
 
 export default class ERouter extends React.Component {
   render () {
@@ -65,12 +65,12 @@ export default class ERouter extends React.Component {
                   <Route path="/order" component={Order} />
                   <Route path='/bikeMap' component={BikeMap} />
                   <Route path='/user' component={User} />
-                  {/* <Route path="/charts/bar" component={Bar} /> */}
-                  {/* <Route path="/charts/pie" component={Pie} /> */}
-                  {/* <Route path="/charts/line" component={Line} /> */}
-                  {/* <Route path="/permission" component={Permission} /> */}
+                  <Route path="/charts/bar" component={Bar} />
+                  <Route path="/charts/pie" component={Pie} />
+                  <Route path="/charts/line" component={Line} />
+                  <Route path="/permission" component={Permission} />
                   <Redirect to="/home" />
-                  {/* <Route component={NoMatch} /> */}
+                  <Route component={NoMatch} />
                 </Switch>
               </Admin>
             } />
